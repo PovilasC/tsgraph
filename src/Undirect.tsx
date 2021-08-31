@@ -15,6 +15,7 @@ function Undirect() {
   const [node, setNode] = useState<string>("");
   const [searchNode, setSearchNode] = useState<string>("");
 
+  // first part
   graph2.addVertex("2.A");
   graph2.addVertex("2.B");
   graph2.addVertex("2.C");
@@ -23,13 +24,14 @@ function Undirect() {
   graph2.addVertex("2.F");
   graph2.addVertex("2.G");
 
+  // second part
   graph2.addEdge("2.A", "2.B", true);
-  graph2.addEdge("2.A", "2.C", false);
+  graph2.addEdge("2.A", "2.C", true);
   graph2.addEdge("2.B", "2.D", true);
   graph2.addEdge("2.B", "2.E", true);
   graph2.addEdge("2.E", "2.C", false);
   graph2.addEdge("2.C", "2.F", true);
-  graph2.addEdge("2.C", "2.G", false);
+  graph2.addEdge("2.C", "2.G", true);
 
   useEffect(() => {
     let size = Object.keys(graph2.adjacentList).length;

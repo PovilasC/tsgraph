@@ -26,7 +26,7 @@ export class Graph {
     }
 
 
-    addEdge(vertex1:string|null = null, vertex2:string|null = null, directed:boolean = true) {
+    addEdge(vertex1:string|null = null, vertex2:string|null = null, undirect:boolean = true) {
         if (
           // check if vertex are not null and are different from each other
           vertex1 !== null &&
@@ -47,7 +47,7 @@ export class Graph {
           this._adjacentList.get(vertex1).add(vertex2);
     
           // if directed, create a line from vertex2 to vertex1
-          if (directed) {
+          if (undirect) {
             this._adjacentList.get(vertex2).add(vertex1);
           }
         }
