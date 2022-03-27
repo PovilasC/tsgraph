@@ -25,7 +25,6 @@ export class Graph {
           }
     }
 
-
     addEdge(vertex1:string|null = null, vertex2:string|null = null, undirect:boolean = true) {
         if (
           // check if vertex are not null and are different from each other
