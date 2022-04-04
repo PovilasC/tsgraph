@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Direct />
       <Undirect />
-      <Test />
+      <TestA />
     </div>
   );
 }
